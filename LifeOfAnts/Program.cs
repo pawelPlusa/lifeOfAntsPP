@@ -2,11 +2,25 @@
 
 namespace LifeOfAnts
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private HiveMap _map;
+        private int roundCounter;
+
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            new Program();
+        }
+
+        private Program()
+        {
+            PopulateMap test1 = new PopulateMap();
+            //foreach(string test111 in test1.allFieldsType)
+            //{
+            //    Console.WriteLine(test111);
+            //}
+            //_map = new HiveMap(203,203);
+
         }
     }
 }

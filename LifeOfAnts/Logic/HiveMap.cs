@@ -1,10 +1,11 @@
-﻿using System;
+﻿using LifeOfAnts.Logic;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LifeOfAnts
 {
-    class HiveMap
+    public class HiveMap
     {
         private readonly Cell[,] _cells;
         public HiveMap(int width, int height)
@@ -16,7 +17,7 @@ namespace LifeOfAnts
             {
                 for (var y = 0; y < height; y++)
                 {
-                    _cells[x, y] = new Cell(this, x, y);
+                    _cells[x, y] = new Cell(x, y);
                 }
             }
         }

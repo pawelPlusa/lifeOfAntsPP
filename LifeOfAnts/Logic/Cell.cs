@@ -1,15 +1,16 @@
-﻿using System;
+﻿using LifeOfAnts.Logic.Actors;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LifeOfAnts
+namespace LifeOfAnts.Logic
 {
-    class Cell
+    public class Cell
     {
         private HiveMap _actualMap;
-        public Cell(HiveMap actualMap, int x, int y)
+        public Cell(int x, int y)
         {
-            _actualMap = actualMap;
+            //_actualMap = actualMap;
             X = x;
             Y = y;
         }
@@ -22,6 +23,8 @@ namespace LifeOfAnts
         {
             return _actualMap.GetCell(X + dx, Y + dy);
         }
+
+        public Actor Actor;
 
         /// <summary>
         /// Returns a cell in the given distance

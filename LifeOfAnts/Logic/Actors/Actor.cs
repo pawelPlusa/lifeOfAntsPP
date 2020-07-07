@@ -13,8 +13,26 @@ namespace LifeOfAnts.Logic.Actors
             Cell = cell;
             Cell.Actor = this;
         }
-       
+        public abstract Tuple<int,int> PlanMove();
+        
+        public void Move()
+        //public void Move(Tuple<int, int> nextMoveCoords)
+        {
+            Tuple<int, int> moveCoords = PlanMove();
+            
+            Cell nextCell = Cell.GetNeighbor(moveCoords.Item1, moveCoords.Item2);
 
+            if(!nextCell.Actor?.IsNotPassable ?? true)
+            {
+                Cell.Actor = null;
+                nextCell.Actor = this;
+                Cell = nextCell;
+            }
+            else
+            {
+                Console.WriteLine("else move");
+            }
+        }
         public abstract bool IsNotPassable { get; }
 
         /// <summary>
@@ -27,6 +45,8 @@ namespace LifeOfAnts.Logic.Actors
         /// </summary>
         public int Y => Cell.Y;
 
-        public string Tilename => "actor";
+        //public abstract string Tilename => "actor";
+
+        public abstract char Symbol { get; }
     }
 }

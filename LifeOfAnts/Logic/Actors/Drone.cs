@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LifeOfAnts.Logic
+namespace LifeOfAnts.Logic.Actors
 {
-    public interface IDrawable
+    class Drone
     {
-        char Symbol { get; }
     }
 }

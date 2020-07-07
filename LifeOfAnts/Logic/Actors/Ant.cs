@@ -4,7 +4,21 @@ using System.Text;
 
 namespace LifeOfAnts.Logic.Actors
 {
-    class Ant
+    public abstract class Ant:Actor
     {
-    }
+        public Ant(Cell cell)
+            : base(cell) { }
+
+        
+        public virtual bool WaspAlert()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual void GetDirection(Object whatIsInAOI)
+        {
+
+        }
+
+    };
 }

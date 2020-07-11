@@ -1,4 +1,5 @@
 ﻿using System;
+using LifeOfAnts.Logic;
 
 namespace LifeOfAnts
 {
@@ -14,7 +15,7 @@ namespace LifeOfAnts
 
         private Program()
         {
-            PopulateMap test1 = new PopulateMap();
+            _map = HiveMapLoader.InitiateMap(5);
             //foreach(string test111 in test1.allFieldsType)
             //{
             //    Console.WriteLine(test111);

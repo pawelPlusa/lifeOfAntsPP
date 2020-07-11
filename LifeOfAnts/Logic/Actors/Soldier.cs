@@ -4,14 +4,12 @@ using System.Text;
 
 namespace LifeOfAnts.Logic.Actors
 {
-    public class Worker:Ant
+    public class Soldier : Ant
     {
-        public Worker(Cell cell) : base(cell) { }
+        public Soldier(Cell cell) : base(cell) { }
+        public override bool IsNotPassable => throw new NotImplementedException();
 
-
-        public override bool IsNotPassable => true;
-
-        public override char Symbol => 'W';
+        public override char Symbol => 'S';
 
         public override void GenerateAnts(ref HiveMap map)
         {

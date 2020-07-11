@@ -25,6 +25,12 @@ namespace LifeOfAnts.Logic
         }
 
         public Actor Actor;
+        public Ant Ant;
+        
+        public Queen Queen;
+        public Soldier Soldier;
+        public Drone Drone;
+        public Worker Worker;
 
         /// <summary>
         /// Returns a cell in the given distance
@@ -34,6 +40,10 @@ namespace LifeOfAnts.Logic
         public Cell GetCell()
         {
             return _actualMap.GetCell(X, Y);
+        }
+        public void PrintCoords()
+        {
+            Console.WriteLine(this.X +"," + this.Y);
         }
     }
 }

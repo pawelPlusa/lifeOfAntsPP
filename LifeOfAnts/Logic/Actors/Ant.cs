@@ -9,7 +9,7 @@ namespace LifeOfAnts.Logic.Actors
         public Ant(Cell cell)
             : base(cell) { }
 
-        
+        public abstract void GenerateAnts(ref HiveMap map);
         public virtual bool WaspAlert()
         {
             throw new NotImplementedException();
